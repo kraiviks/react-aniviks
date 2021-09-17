@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-aniviks/static/css/main.f78b44fc.chunk.css",
-    "main.js": "/react-aniviks/static/js/main.fcb5c190.chunk.js",
-    "main.js.map": "/react-aniviks/static/js/main.fcb5c190.chunk.js.map",
+    "main.js": "/react-aniviks/static/js/main.bd8ca248.chunk.js",
+    "main.js.map": "/react-aniviks/static/js/main.bd8ca248.chunk.js.map",
     "runtime-main.js": "/react-aniviks/static/js/runtime-main.a9ca369b.js",
     "runtime-main.js.map": "/react-aniviks/static/js/runtime-main.a9ca369b.js.map",
     "static/js/2.2bed0842.chunk.js": "/react-aniviks/static/js/2.2bed0842.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.a9ca369b.js",
     "static/js/2.2bed0842.chunk.js",
     "static/css/main.f78b44fc.chunk.css",
-    "static/js/main.fcb5c190.chunk.js"
+    "static/js/main.bd8ca248.chunk.js"
   ]
 }
