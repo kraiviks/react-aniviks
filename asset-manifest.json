@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-aniviks/static/css/main.76988de7.chunk.css",
-    "main.js": "/react-aniviks/static/js/main.f28272d5.chunk.js",
-    "main.js.map": "/react-aniviks/static/js/main.f28272d5.chunk.js.map",
+    "main.css": "/react-aniviks/static/css/main.17783553.chunk.css",
+    "main.js": "/react-aniviks/static/js/main.4b9297af.chunk.js",
+    "main.js.map": "/react-aniviks/static/js/main.4b9297af.chunk.js.map",
     "runtime-main.js": "/react-aniviks/static/js/runtime-main.a9ca369b.js",
     "runtime-main.js.map": "/react-aniviks/static/js/runtime-main.a9ca369b.js.map",
-    "static/js/2.36bea162.chunk.js": "/react-aniviks/static/js/2.36bea162.chunk.js",
-    "static/js/2.36bea162.chunk.js.map": "/react-aniviks/static/js/2.36bea162.chunk.js.map",
+    "static/js/2.fac470bb.chunk.js": "/react-aniviks/static/js/2.fac470bb.chunk.js",
+    "static/js/2.fac470bb.chunk.js.map": "/react-aniviks/static/js/2.fac470bb.chunk.js.map",
     "index.html": "/react-aniviks/index.html",
-    "static/css/main.76988de7.chunk.css.map": "/react-aniviks/static/css/main.76988de7.chunk.css.map",
-    "static/js/2.36bea162.chunk.js.LICENSE.txt": "/react-aniviks/static/js/2.36bea162.chunk.js.LICENSE.txt"
+    "static/css/main.17783553.chunk.css.map": "/react-aniviks/static/css/main.17783553.chunk.css.map",
+    "static/js/2.fac470bb.chunk.js.LICENSE.txt": "/react-aniviks/static/js/2.fac470bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a9ca369b.js",
-    "static/js/2.36bea162.chunk.js",
-    "static/css/main.76988de7.chunk.css",
-    "static/js/main.f28272d5.chunk.js"
+    "static/js/2.fac470bb.chunk.js",
+    "static/css/main.17783553.chunk.css",
+    "static/js/main.4b9297af.chunk.js"
   ]
 }
