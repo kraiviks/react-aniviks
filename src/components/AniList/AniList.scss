@@ -1,0 +1,25 @@
+.anilist {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: auto;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+}
+
+.ani-card + .add {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.5s;
+	user-select: none	;
+	&:hover {
+		box-shadow: 1px 1px 10px white;
+		.add-item {
+			transition: all 0.5s;
+			color: green;
+			transform: scale(1.5);
+		}
+	}
+}

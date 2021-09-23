@@ -1,0 +1,47 @@
+.profile {
+	display: grid;
+	gap: 30px;
+	grid-template-areas:
+		"user userBox userBox userBox userBox"
+		"user userBox userBox userBox userBox"
+		"tags tags tags tags tags";
+	.user {
+		grid-area: user;
+	}
+	.user-box {
+		grid-area: userBox;
+		padding: 20px;
+		display: grid;
+		gap: 10px;
+		grid-template-columns: 1fr 5fr;
+		.user__counter {
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.new-anime {
+			padding: 20px;
+			display: flex;
+			overflow-x: auto;
+			gap: 10px;
+		}
+	}
+	.tags {
+		grid-area: tags;
+		display: flex;
+		flex-wrap: wrap;
+		overflow: auto;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+	}
+}
+
+.title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
