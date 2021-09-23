@@ -11,9 +11,9 @@
 	.user-box {
 		grid-area: userBox;
 		padding: 20px;
-		display: grid;
+		display: flex;
 		gap: 10px;
-		grid-template-columns: 1fr 5fr;
+		overflow-x: auto;
 		.user__counter {
 			padding: 20px;
 			display: flex;

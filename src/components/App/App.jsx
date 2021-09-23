@@ -166,7 +166,7 @@ const App = () => {
 									AniViks
 								</Typography>
 							</IconButton>
-							{isuser ? "Good" : null}
+							{isuser ? "Вы вошли" : null}
 						</Toolbar>
 					</AppBar>
 					<Drawer
@@ -210,6 +210,7 @@ const App = () => {
 										padding: 20,
 										textAlign: "center",
 									}}
+									onClick={handleDrawerClose}
 								>
 									Профіль
 								</Link>
@@ -224,6 +225,7 @@ const App = () => {
 										padding: 20,
 										textAlign: "center",
 									}}
+									onClick={handleDrawerClose}
 								>
 									Список
 								</Link>
@@ -261,7 +263,7 @@ const App = () => {
 							</ListItem>
 						</List>
 					</Drawer>
-					<Main open={open}>
+					<Main open={open} onClick={handleDrawerClose}>
 						<DrawerHeader />
 						{user ? (
 							<Switch>

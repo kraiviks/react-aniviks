@@ -1,0 +1,66 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.anilist {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr);
+		
+	}
+	.css-yfo96e{
+		padding: 0 !important;
+	}
+	.user{
+		display: none;
+	}
+	.user-box{
+		display: flex;
+		h2{
+			text-align: center;
+		}
+		.new-anime{
+			gap: 50px !important;
+		}
+	}
+
+	.likes{
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.dialog > .css-hz1bth-MuiDialog-container{
+		margin-left: -25%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.anilist {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: auto;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+	}
+	.tags{
+		display: flex;
+		flex-direction: column;
+	}
+	.likes{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

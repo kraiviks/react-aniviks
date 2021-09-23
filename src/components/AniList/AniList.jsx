@@ -92,7 +92,7 @@ const AniList = () => {
 			: anilist.anilist.map((item) => {
 					return (
 						<Card
-							sx={{ maxWidth: 200, minWidth: 200}}
+							sx={{ maxWidth: 200 }}
 							key={item.id}
 							className="ani-card"
 						>
@@ -157,14 +157,14 @@ const AniList = () => {
 		<section className="anilist">
 			{anime}{" "}
 			<Card
-				sx={{ maxWidth: 150, minWidth: 150 }}
+				sx={{ maxWidth: 150}}
 				className="ani-card add"
 				onClick={() => setPage(page > 0 ? page - 1 : 1)}
 			>
 				<CardContent className="add-item"> Prev page</CardContent>
 			</Card>
 			<Card
-				sx={{ maxWidth: 150, minWidth: 150 }}
+				sx={{ maxWidth: 150 }}
 				className="ani-card add"
 				onClick={() => setPage(page + 1)}
 			>

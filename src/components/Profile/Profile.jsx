@@ -50,7 +50,12 @@ const Profile = () => {
 		state.length > 1 ? (
 			state.map((item) => {
 				return (
-					<Badge color="secondary" badgeContent="NEW" key={item.id}>
+					<Badge
+						color="secondary"
+						badgeContent="NEW"
+						key={item.id}
+						className="bage"
+					>
 						<Card
 							sx={{ maxWidth: 200, minWidth: 200 }}
 							className="ani-card"
@@ -116,7 +121,7 @@ const Profile = () => {
 	return (
 		<section className="profile">
 			<Card sx={{ maxWidth: 345 }} className="user">
-				<CardActionArea>
+				<CardActionArea style={{display: 'flex', flexDirection:"column", justifyContent:'space-around', height: "100%"}}>
 					<CardMedia
 						component="img"
 						height="140"
@@ -128,24 +133,16 @@ const Profile = () => {
 						<div className="user-age">25</div>
 						<div className="user-country">Country: Ukraine</div>
 						<div className="user-about">
-							Lizards are a widespread group of squamate reptiles,
-							with over 6,000 species, ranging across all
-							continents except Antarctica
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Molestiae enim ea eveniet inventore ipsum
+							dolorem deleniti nihil modi temporibus debitis. In
+							aut eum, voluptatibus libero quia quae asperiores
+							quas. Iure!
 						</div>
 					</CardContent>
 				</CardActionArea>
-				<CardActions>
-					<Button size="small" color="primary">
-						Share
-					</Button>
-				</CardActions>
 			</Card>
 			<Paper elevation={3} className="user-box">
-				<Paper elevation={2} className="user__counter">
-					<div className="title user__likes-anime">
-						Likes anime: {anilikes.length}
-					</div>
-				</Paper>
 				<Paper elevation={3} style={{ overflow: "hidden" }}>
 					<h2>20 Новинок</h2>
 					<Paper elevation={2} className="new-anime">
@@ -154,7 +151,10 @@ const Profile = () => {
 				</Paper>
 			</Paper>
 			<Paper elevation={24} className="tags">
-				{animeLikes}
+				<div className="title user__likes-anime">
+					Likes anime: {anilikes.length}
+				</div>
+				<div className="likes">{animeLikes}</div>
 			</Paper>
 		</section>
 	);

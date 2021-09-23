@@ -15,7 +15,6 @@ function AnimeDescDialog() {
 		<Dialog
 			onClose={handleClose}
 			open={animeDialog}
-			className="dialog"
 		>
 			<div className="dialog-wrapper">
 				<DialogTitle>
