@@ -51,7 +51,7 @@ function AuthDialog() {
 					<TextField
 						required
 						id="outlined-required"
-						label="Login"
+						label="Email"
 						onChange={(e) => setEmail(e.target.value)}
 					/>
 					<TextField
