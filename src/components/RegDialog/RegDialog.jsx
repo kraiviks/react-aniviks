@@ -3,13 +3,13 @@ import "./RegDialog.scss";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { TextField, Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { setReg } from "../../redux/reducer";
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	updateProfile
+	updateProfile,
 } from "firebase/auth";
 
 function RegDialog() {
@@ -21,6 +21,7 @@ function RegDialog() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [displayName, setdisplayName] = useState("");
+	const [errorRegister, setErrorRegister] = useState("");
 
 	//firebase
 	const register = (e) => {
@@ -28,43 +29,39 @@ function RegDialog() {
 		const auth = getAuth();
 		createUserWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
-				updateProfile(userCredential.user, {
-					displayName: displayName
-				  }).then(() => {
-					// Profile updated!
-					// ...
-				  }).catch((error) => {
-					// An error occurred
-					// ...
-				  });
-				handleClose();
-				console.log("Ви зареєструвались");
-				// ...
-				signInWithEmailAndPassword(auth, email, password)
-					.then((userCredential) => {
-						// Signed in
-						const user = userCredential.user;
-						if (user) {
-							handleClose();
-							console.log("Ви увiйшли");
-						}
-						// ...
+				updateProfile(auth.currentUser, {
+					displayName: displayName,
+				})
+					.then(() => {
+						console.log("Ви зарегестрировались");
 					})
 					.catch((error) => {
-						const errorCode = error.code;
-						const errorMessage = error.message;
+						console.log(error);
 					});
 			})
 			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
-				// ..
+				switch (error.code) {
+					case "auth/email-already-in-use":
+						setErrorRegister("Такой email уже зарегестрирован");
+						break;
+					case "auth/invalid-email":
+						setErrorRegister("Неправильный формат email");
+						break;
+					case "auth/weak-password":
+						setErrorRegister("Слишком слабый пароль");
+						break;
+					default:
+						setErrorRegister(error.code);
+				}
 			});
 	};
 	return (
 		<Dialog onClose={handleClose} open={state} className="dialog">
 			<div className="dialog-wrapper">
 				<DialogTitle>Registration</DialogTitle>
+				<Typography component="h1" variant="h5" color="red">
+					{errorRegister}
+				</Typography>
 				<form onSubmit={register}>
 					<TextField
 						required

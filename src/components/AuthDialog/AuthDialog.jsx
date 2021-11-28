@@ -3,6 +3,7 @@ import "./AuthDialog.scss";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { TextField, Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 import { setLogin, setReg } from "../../redux/reducer";
 import { useSelector } from "react-redux";
@@ -22,23 +23,20 @@ function AuthDialog() {
 	//firebase
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [errorLogin, setErrorLogin] = useState("");
+
 
 	const login = (e) => {
 		e.preventDefault();
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
-			.then((userCredential) => {
-				// Signed in
-				const user = userCredential.user;
-				if (user) {
-					handleClose();
-					console.log("Ви увiйшли");
-				}
-				// ...
-			})
+			.then((userCredential) => {})
 			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
+				if (error.code === "auth/wrong-password") {
+					setErrorLogin("Неверный пароль");
+				} else if (error.code === "auth/user-not-found") {
+					setErrorLogin("Пользователь не найден");
+				}
 			});
 	};
 
@@ -46,6 +44,9 @@ function AuthDialog() {
 		<Dialog onClose={handleClose} open={state} className="dialog">
 			<div className="dialog-wrapper">
 				<DialogTitle>Auth</DialogTitle>
+				<Typography component="h1" variant="h5" color="red">
+					{errorLogin}
+				</Typography>
 				<form onSubmit={login}>
 					<TextField
 						required
