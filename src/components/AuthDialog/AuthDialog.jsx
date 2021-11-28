@@ -30,7 +30,7 @@ function AuthDialog() {
 		e.preventDefault();
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
-			.then((userCredential) => {})
+			.then((userCredential) => handleClose())
 			.catch((error) => {
 				if (error.code === "auth/wrong-password") {
 					setErrorLogin("Неверный пароль");

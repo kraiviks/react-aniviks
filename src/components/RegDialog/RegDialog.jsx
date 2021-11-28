@@ -34,6 +34,7 @@ function RegDialog() {
 				})
 					.then(() => {
 						console.log("Ви зарегестрировались");
+						handleClose();
 					})
 					.catch((error) => {
 						console.log(error);
