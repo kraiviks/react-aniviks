@@ -164,7 +164,6 @@ const App = () => {
 									component="div"
 									sx={{ flexGrow: 1 }}
 								>
-									AniViks
 								</Typography>
 							</IconButton>
 							{isuser ? "Вы вошли" : null}

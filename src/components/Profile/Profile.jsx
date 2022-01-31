@@ -28,7 +28,7 @@ const Profile = () => {
 	const dispatch = useDispatch();
 
 	const [url, seturl] = useState(
-		"https://shikimori.one/api/animes?limit=20&order=aired_on"
+		"https://shikimori.one/api/animes?limit=20&order=popularity"
 	);
 
 	useEffect(() => {
@@ -144,7 +144,7 @@ const Profile = () => {
 			</Card>
 			<Paper elevation={3} className="user-box">
 				<Paper elevation={3} style={{ overflow: "hidden" }}>
-					<h2>20 Новинок</h2>
+					<h2>ТОП 20</h2>
 					<Paper elevation={2} className="new-anime">
 						{aninew}
 					</Paper>
